@@ -1,0 +1,29 @@
+{
+  "name": "exercise_tracker",
+  "version": "1.0.0",
+  "description": "keep track of your exercise routine",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MDJ2014/exercise_tracker.git"
+  },
+  "author": "Mark Jones",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MDJ2014/exercise_tracker/issues"
+  },
+  "homepage": "https://github.com/MDJ2014/exercise_tracker#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.20",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

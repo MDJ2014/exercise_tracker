@@ -1,0 +1,25 @@
+extends layout.pug
+
+block content
+  .formContainer.container.col-sm
+  #userFormContainer.container.col-sm
+          h4 Create New User
+          |     
+          h6 If you are a new user, enter a new username here and it will be saved.
+          |     
+          form#newUser(method='POST', action='/')
+            label(for='newUserName') New user name:
+            |         
+            input#newusername(type='text', name='newUserName', placeholder='enter new username')
+            br
+            |         
+            #userFeedback.feedback= savefeedback
+            |         
+            br
+            |         
+            |         
+            input#newUserSubmit.btn.btn-dark(type='submit', value='Submit')
+            br
+            br
+            input#goToAddExercise.btn.btn-dark(type='button',value='Add Exercise',onclick="location.href= '/api/exercise/add';")
+  .formContainer.container.col-sm

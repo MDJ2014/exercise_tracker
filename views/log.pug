@@ -1,0 +1,29 @@
+extends layout.pug
+
+block content
+    .formContainer.container.col-sm
+    #logFormContainer.container.col-sm
+          h4 View My Exercise Log
+          |     
+          h6 Enter your usename here to view all of your saved exercises.
+          |     
+          form#newExercise(method='POST', action='/api/exercise/log')
+            label(for='returnUser') User name:
+            |     
+            input#returnUser(type='text', name='returnuser', placeholder='enter username')
+            |     
+            input#returnUserBtn.btn.btn-dark(type='submit', value='View list')
+          #exerciseList
+            h5 #{logFeedback}&apos;s Exercise Log
+            - var list = exerciseList;
+            if list
+              div#logList
+                each exercise in exerciseList
+                  div
+                    span= exercise.description
+                    span.space
+                    span= exercise.duration
+                    span.space
+                    span= exercise.date
+
+    .formContainer.container.col-sm

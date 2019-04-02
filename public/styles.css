@@ -1,0 +1,107 @@
+body{
+    background-color: #FFF072;
+    color: #333;
+    font-family: sans-serif;
+    text-align: center;
+    vertical-align: center;
+
+}
+
+h2{
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+#top{
+    margin-top: 70px;
+}
+
+#userFormContainer{
+    background-color: #ECCE62;
+    height: 25em;
+    border: 2px solid black;
+    width: auto;
+}
+#exerciseFormContainer{
+    background-color: #ECCE62;
+    height: 35em;
+    border: 2px solid black;
+    width: auto;
+}
+#logFormContainer{
+    background-color: #ECCE62;
+    height: 35em;
+    border: 2px solid black;
+    width: auto;
+}
+
+
+#userInterface{
+margin-top: 60px;
+}
+
+#newUser{
+margin-top: 5em;
+margin-left: 5em;
+}
+
+
+#newExercise{
+    margin-top: 1em;
+    margin-left: 5em;
+}
+
+.feedback{
+   
+   color: blue;
+    height: 1px;
+}
+
+
+form{
+ 
+    width: 400px;
+    clear: left;
+}
+input{
+    width: 100%;
+clear: both;
+
+}
+
+#returnUser{
+width: 50%;
+}
+#returnUserBtn{
+width: 90px;
+height: 32px;
+}
+
+#exerciseList{
+    margin-top: 40px;
+    height: 300px;
+    overflow-y: scroll;
+
+}
+
+#exerciseList::-webkit-scrollbar-track
+{
+	border: 1px solid black;
+	background-color: #F5F5F5;
+}
+
+#exerciseList::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+#exerciseList::-webkit-scrollbar-thumb
+{
+	background-color: #000000;	
+}
+#exerciseList::-webkit-scrollbar-button {
+    background-color: #7c2929;
+}
+
+.space{
+    padding-right: 10px;
+}

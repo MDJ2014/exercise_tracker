@@ -1,0 +1,174 @@
+doctype html(lang='en')
+head
+    meta(charset='utf-8')
+        
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', integrity='sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+', crossorigin='anonymous')
+       
+    link(rel='stylesheet', type='text/css' href='index.css')
+        
+    title Exercise Tracker
+     
+body.container-fluid
+    h1 Exercise Tracker
+    h3 Just register your user name and start adding exercises.
+    h4 Then you can enter your user name to view your saved exercises
+    #userInterface.container-fluid
+      .row
+        .formContainer.container.col-sm
+          h4 Create New User
+          |     
+          h6 If you are a new user, enter a new username here and it will be saved.
+          |     
+          form#newUser(method='POST', action='/')
+            label(for='newUserName') New user name:
+            |         
+            input#newusername(type='text', name='newUserName', placeholder='enter new username')
+            br
+            |         
+            #userFeedback.feedback= savefeedback
+            |         
+            br
+            |         
+            |         
+            input#newUserSubmit.btn.btn-dark(type='submit', value='Submit')
+            br
+            br
+            input#goToAddExercise.btn.btn-dark(type='button',value='Add Exercise',onclick="location.href= '/api/exercise/add';")
+        .formContainer.container.col-sm
+          h4 Add Exercise
+          |     
+          h6 After you enter your user name, enter as many exercises as you like.
+          |     
+          form#newExercise(method='POST', action='/api/exercise/add')
+            label(for='user') User name:
+            |        
+            input#user(type='text', name='user', placeholder='enter username')
+            br
+            br
+            |        
+            label(for='description') Description:
+            |         
+            input#description(type='text', name='description', placeholder='enter description')
+            br
+            br
+            |         
+            label(for='duration') Duration:
+            |         
+            input#duration(type='text', name='duration', placeholder='enter duration')
+            br
+            br
+            |         
+            label(for='date') Date:
+            |           
+            input#date(type='text', name='date', placeholder='enter date')
+            br
+            br
+            | 
+            #exercisefeedback= exFeedback        
+            input.btn.btn-dark(type='submit', value='Submit')
+        .formContainer.container.col-sm
+          h4 View My Exercise Log
+          |     
+          h6 Enter your usename here to view all of your saved exercises.
+          |     
+          form#newExercise(method='GET', action='/api/exercise/log/:userId')
+            label(for='returnUser') User name:
+            |     
+            input#returnUser(type='text', name='user', placeholder='enter username')
+            |     
+            input#returnUserBtn.btn.btn-dark(type='submit', value='View list')
+          #exerciseList
+            h5 Mark&apos;s Exercise Log
+            div
+              span Description
+              span        |       
+              span Duration
+              span         |        
+              span Date
+            div
+              span Description
+              span        |       
+              span Duration
+              span         |        
+              span Date
+            div
+              span Description
+              span        |       
+              span Duration
+              span         |        
+              span Date
+            div
+              span Description
+              span        |       
+              span Duration
+              span         |        
+              span Date
+            div
+              span Description
+              span        |       
+              span Duration
+              span         |        
+              span Date
+            div
+              span Description
+              span        |       
+              span Duration
+              span         |        
+              span Date
+            div
+              span Description
+              span        |       
+              span Duration
+              span         |        
+              span Date
+            div
+              span Description
+              span        |       
+              span Duration
+              span         |        
+              span Date
+            div
+              span Description
+              span        |       
+              span Duration
+              span         |        
+              span Date
+            div
+              span Description
+              span        |       
+              span Duration
+              span         |        
+              span Date
+            div
+              span Description
+              span        |       
+              span Duration
+              span         |        
+              span Date
+            div
+              span Description
+              span        |       
+              span Duration
+              span         |        
+              span Date
+            div
+              span Description
+              span        |       
+              span Duration
+              span         |        
+              span Date
+            div
+              span Description
+              span        |       
+              span Duration
+              span         |        
+              span Date
+    
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+   
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+

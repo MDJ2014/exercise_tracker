@@ -1,0 +1,40 @@
+extends layout.pug
+
+block content
+    .formContainer.container.col-sm
+    #exerciseFormContainer.container.col-sm
+          h4 Add Exercise
+          |     
+          h6 After you enter your user name, enter as many exercises as you like.
+          |     
+          form#newExercise(method='POST', action='/api/exercise/add')
+            label(for='user') User name:
+            |        
+            input#user(type='text', name='user', placeholder='enter username')
+            br
+            br
+            |        
+            label(for='description') Description:
+            |         
+            input#description(type='text', name='description', placeholder='enter description')
+            br
+            br
+            |         
+            label(for='duration') Duration:
+            |         
+            input#duration(type='text', name='duration', placeholder='enter duration')
+            br
+            br
+            |         
+            label(for='date') Date:
+            |           
+            input#date(type='text', name='date', placeholder='enter date')
+            br
+            br
+            | 
+            #exercisefeedback= exFeedback        
+            input.btn.btn-dark(type='submit', value='Submit')
+            br
+            br
+            input#goToExerciseLog.btn.btn-dark(type='button',value='View All Exercises',  onclick="location.href= '/api/exercise/log';")
+    .formContainer.container.col-sm        
