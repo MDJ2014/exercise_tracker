@@ -15,6 +15,14 @@ body.container-fluid
     h4#top Just register your user name and click Add Exercise.
     h4 If you already registered, just click Add Exercise.
     h4 You can view all of your saved exercises from the Add Exercise menu.
+    br
+    div
+      span.space
+        a(href= '/') Login
+      span.space
+        a(href= '/api/exercise/add') Add Exercise
+      span.space
+        a(href= '/api/exercise/log') View Log  
     #userInterface.container-fluid
       .row
         block content
