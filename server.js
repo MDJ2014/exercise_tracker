@@ -1,6 +1,14 @@
 var app = require('./app');
 
 
-var listener = app.listen(process.env.PORT || 3000, function () {
+
+
+const PORT = process.env.PORT || config.httpPort;
+
+var listener = app.listen(PORT, function () {
     console.log('Your app is listening on port ' + listener.address().port);
   });
+
+
+
+  //process.env.PORT || 3000

@@ -8,7 +8,8 @@ var exercise = require("./model").exercise;
 mongoose.Promise = global.Promise;
 
 //mongoose.connect("mongodb://localhost:27017/exercise-log");
-mongoose.connect("mongodb://heroku_j4lt86jw:tphg0avl85c3kb7uj9evq3oqmj@ds127646.mlab.com:27646/heroku_j4lt86jw"); 
+const MONGODB_URI = "mongodb://heroku_j4lt86jw:tphg0avl85c3kb7uj9evq3oqmj@ds127646.mlab.com:27646/heroku_j4lt86jw";
+mongoose.connect(MONGODB_URI); 
 var db = mongoose.connection;
 
 db.on("error", function(err) {
